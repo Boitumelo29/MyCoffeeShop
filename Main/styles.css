@@ -4,9 +4,9 @@
 :root{
     --main-color: rgb(171, 52, 52);
     --black: black;
-    --bg: rgb(125, 19, 19);
+    --bg: rgb(63, 4, 4);
     --border: .1rem solid rgba(215, 12, 12, 0.644);
-
+    --fcollor: #fff;
 
 }
 *{
@@ -35,5 +35,96 @@ html::-webkit-scrollbar{
 }
 
 html::-webkit-scrollbar-track{
-    width: 8rem;
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: #fff;
+    border-radius: 5rem;
+}
+
+body{
+    background: var(--bg);
+}
+
+.header{
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header .log i{
+    color: white;
+    height: 6rem;
+}
+
+.header .log img{
+    height: 6rem;
+}
+
+.header .navbar a{
+    margin: 0 1rem;
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+.header .navbar a:hover{
+    color: var(--main-color);
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .10rem;
+}
+
+.header .icons div{
+    color: var(--fcollor);
+    font-size: 2.5rem;
+    cursor: pointer;
+    margin-left: 2rem;
+}
+
+.header .icons div:hover{
+    color: var(--main-color);
+}
+
+#menu-btn{
+    display: none;
+}
+
+.header .search-form{
+position: absolute;
+top: 111%;
+right: var(--fcollor);
+background: 50rem;
+height: 5rem;
+display: flex;
+align-items: center;
+transform: scaleY(0) ;
+transform-origin: top;
+}
+
+.header .search-form input{
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    color: var(--black);
+    padding: 1rem;
+    text-transform: none;
+}
+
+.header .search-form label{
+    cursor: pointer;
+    font-size: 2.2rem;
+    margin-right: 1.5rem;
+    color: var(--black);
+}
+
+.header .search-form label:hover{
+    color: var(--main-color);
 }
