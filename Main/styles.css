@@ -47,6 +47,22 @@ body{
     background: var(--bg);
 }
 
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 9rem 3rem;
+    font-size: 1.7rem;
+    color: var(--fcollor);
+    background: var(--main-color);
+    cursor: pointer;
+    
+}
+
+.btn:hover{
+letter-spacing: .2rem;
+
+}
+
 .header{
     background: var(--bg);
     display: flex;
@@ -128,3 +144,80 @@ transform-origin: top;
 .header .search-form label:hover{
     color: var(--main-color);
 }
+
+.header .cart-items-container{
+    position: absolute;     
+    top:100%;
+    right: 0;
+    width: 35rem;
+    height: calc(100vh -9.5rem);
+    background-color: var(--fcollor);
+    padding: 0 1.5rem;
+}
+
+.header .cart-items-container .cart-item{
+    position: relative;
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* I need to fix the right side button on the close item it is not complete*/
+.header .cart-items-container .cart-item .fa-times{
+position: absolute;
+top: 1rem;
+right: 1rem;
+font-size: 2rem;
+cursor: pointer;
+color: var(--black);
+}
+.header .cart-items-container .cart-item .fa-times:hover{
+    color: var(--main-color);
+}
+
+
+.header .cart-items-container .cart-item i{
+    height: 7rem;
+}
+
+.header .cart-items-container .cart-item h3{
+    font-size: 2rem;
+    color: var(--black);
+    padding-bottom: 5rem ;
+}
+
+.header .cart-items-container .cart-item .price{
+    font-size: 1.5rem;
+    color: var(--black);
+    
+}
+
+.header .cart-items-container .btn{
+    width: 100%;
+    text-align: center;
+}
+    
+    @media(max-width: 991px){
+        html{
+            font-size: 55.5%;
+        }
+
+        .header{
+            padding: 1.5rem 2rem;
+        }
+
+    }
+
+    @media(max-width: 991px){
+
+        #menu-btn{
+            display: inline-block;
+        }
+
+        .header .navbar{
+            /*14:59*/
+        }
+
+
+    }
